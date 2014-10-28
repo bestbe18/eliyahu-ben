@@ -20,5 +20,5 @@ else {
     echo "Database already exists.";
 }
    $query = $connection->query("CREATE");
-   
+   //and here
    $connection->close();
