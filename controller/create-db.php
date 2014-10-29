@@ -1,24 +1,27 @@
 <?php
-require_once(__DIR_ . "/../model/database.php");
-//this is my comments
-$connection = new mysqli($host, $username, $password);
-//enter comment here
-if($connection->connect_error) {
+    require_once(__DIR__ . "/../model/database.php");
+
+    $connection = new mysqli($host, $username, $password);
+
+  if($connection->connect_error) {
     die("Error: " . $connection->connect_error);
 }
-$exists = $connection->select_db($database);
-//and here
-if (!$exists) {
-    $query = $connection->query("CREATE DATABASE  $database");
+
+     $exists = $connection->select_db($database);
+
+    if (!$exists) {
+         $query = $connection->query("CREATE DATABASE  $database");
     
     if($query) {
-    echo "Successfully created database: " . $database;
+         echo "Successfully created database: " . $database;
+         //This echo tells us that the database has been created.
     }
-    //also here
-}
-else {
-    echo "Database already exists.";
-}
-   $query = $connection->query("CREATE");
-   //and here
-   $connection->close();
+    }
+    else {
+        //This else is only going to happen when the database is this.
+         echo "Database already exists.";
+        //Once the database exists, this echo tells us that it exists.
+    }
+ 
+ 
+     $connection->close();
