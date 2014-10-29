@@ -11,6 +11,7 @@
 
     if (!$exists) {
          $query = $connection->query("CREATE DATABASE  $database");
+         //I created a Database when it doesn't exist.
     
     if($query) {
          echo "Successfully created database: " . $database;
