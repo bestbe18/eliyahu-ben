@@ -1,4 +1,5 @@
  <?php
+ // this is the home page where everything starts and redirects to
       require_once(__DIR__ . "/controller/login-verify.php");
       require_once(__DIR__ . "/view/header.php");
       if(authenticateUser()) {

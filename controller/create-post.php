@@ -1,6 +1,6 @@
 <?php
     require_once(__DIR__ . "/../model/config.php");
-    
+ // I created a post   
   
     
   $title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);

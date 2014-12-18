@@ -1,5 +1,6 @@
 <?php
     require_once(__DIR__ . "/../model/config.php");
+    // I created a create user
     
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
     $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING);
